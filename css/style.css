@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inter, arial, sans-serif;
+    list-style: none;
+}
+
+:root {
+    --details: hsl(199, 94%, 57%);
+    --grey900: hsl(0, 0%, 8%);
+    --grey800: hsl(0, 0%, 12%);
+    --grey700: hsl(0, 0%, 20%);
+    --light: rgb(206, 206, 206);
+
+
+}
+
+img {
+    height: 150px;
+    border-radius: 100%;
+    margin-bottom: 35px;
+}
+
+body {
+    background-color: var(--grey900);
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+body main {
+    background-color: var(--grey800);
+    margin: 5.50vh;
+    border-radius: 16px;
+    max-width: 750px;
+}
+
+body main .perfil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 35px;
+}
+
+body main .perfil h1 {
+    text-align: center;
+    color: var(--light);
+    margin-bottom: 5px;
+}
+
+body main .perfil p {
+    color: var(--details);
+    margin-bottom: 35px;
+}
+
+body main .perfil span {
+    color: var(--light);
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+body main .perfil .socialMedia ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-content: center;
+}
+
+body main .perfil .socialMedia ul li a {
+    width: 60vw;
+    height: 7vh;
+    display: block;
+    background-color: var(--grey700);
+    border-radius: 8px;
+    align-content: center;
+    text-align: center;
+    max-width: 600px;
+    text-decoration: none;
+    color: var(--light);
+    transition: all 250ms;
+
+}
+
+body main .perfil .socialMedia ul li a:hover {
+    background-color: hsl(0, 0%, 26%);
+    color: var(--details);
+    transform: scale(1.03);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.747);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 250ms;
+    transform: translateX(100%);
+}
+
+.msgIndisponivel {
+    background-color: var(--grey900);
+    color: var(--light);
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    gap: 20px;
+    border-radius: 16px;
+    max-width: 700px;
+}
+
+body main .modal .msgIndisponivel h1 {
+    color: var(--details);
+    background-color: var(--grey800);
+    border-radius: 16px;
+    width: 74vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5vh;
+    padding: 8.8vh;
+    max-width: 650px;
+}
+
+body main .modal .msgIndisponivel p {
+    font-size: 25px;
+    margin-bottom: 5vh;
+}
+
+@media (max-width: 414px) {
+    body main .modal .msgIndisponivel h1 {
+        font-size: 17px;
+        padding: 2vh;
+    }
+
+
+    body main .modal .msgIndisponivel p {
+        font-size: 15px;
+        margin-bottom: 3vh;
+    }
+}
+
+.opened {
+    transform: translateX(0);
+}
